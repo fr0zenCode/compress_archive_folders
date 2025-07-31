@@ -10,13 +10,18 @@ ____
 ```bash
 pip install poetry
 ```
-### 3. Установить зависимости
+### 3. Склонировать проект из GitHub на локальную машину, например через HTTPS
 ```bash
-poetry install 
+git clone <ссылка>
 ```
-### 4. Запустить программу
+### 4. Перейти в директорию проекта
+### 5. Установить зависимости
 ```bash
-python main.py 
+poetry install --no-root
+```
+### 6. Запустить программу
+```bash
+poetry run python main.py 
 ```
 
 # Stack
