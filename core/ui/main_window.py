@@ -82,7 +82,7 @@ class ArchiveApp:
         self.archive_button = setup_main_action_button_widget(
             root=self.root,
             text="Архивировать",
-            command=lambda: self.archive_selected_folder(bool(self.delete_origin_file_after_zip_var)),
+            command=lambda: self.archive_selected_folder(self.delete_origin_file_after_zip_var.get()),
             row=3,
             column=0,
             sticky="w"
@@ -124,7 +124,7 @@ class ArchiveApp:
         self.unarchive_button = setup_main_action_button_widget(
             root=self.root,
             text="Разархивировать",
-            command=lambda: self.unzip_selected_file(bool(self.delete_origin_file_after_unzip_var)),
+            command=lambda: self.unzip_selected_file(self.delete_origin_file_after_unzip_var.get()),
             row=7,
             column=0,
             sticky="w"
